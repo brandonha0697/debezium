@@ -1,0 +1,11 @@
+version: '3'
+services:
+   bdname-test:
+    image: debezium/server
+    container_name: debezium
+    volumes:
+    - /home/brandon_aguilar/debezium/conf:/debezium/conf
+    - /home/brandon_aguilar/debezium/data:/debezium/data
+    restart: unless-stopped
+    ports:
+    - 8081:8080
